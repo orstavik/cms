@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CMS using customAttributes and cloudflare</title>
+</head>
+<body>
+
+<h1 click:db:console.log_e>hello</h1>
+<h2 click:edits:console.log_e>sunshine</h2>
+
+
+<script src="https://cdn.jsdelivr.net/combine/gh/orstavik/customAttributes2/src/customAttributes.js,gh/orstavik/ElementObserver@1.1.0/startObserver.js"></script>
+<script type="module">
+  import {fetchGet} from "./src/CmsReactions.js";
+  customReactions.define("db", fetchGet);
+  customReactions.define("edits", fetchGet);
+</script>
+
+</body>
+</html>
