@@ -13,7 +13,5 @@ async function fetch2xx(...args){
 }
 
 export async function fetchGet(e, prefix) {
-  debugger
-  return await (await fetch2xx("/" + prefix.toUpperCase())).text();
+  return await (await fetch2xx(`/${prefix}`)).text();
 }
-
