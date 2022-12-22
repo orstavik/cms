@@ -2,8 +2,5 @@ function one(context){
   return context.next();
 }
 
-function two(context){
-  return new Response("hello server sunshine");
-}
-
+import two from "./code.js";
 export const onRequest = [one, two];
