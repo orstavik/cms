@@ -1,6 +1,3 @@
-function one(context){
-  return context.next();
-}
+import {one, two, three} from "./code.js";
 
-import {two} from "./code.js";
-export const onRequest = [one, two];
+export const onRequest = [three, one, two];
